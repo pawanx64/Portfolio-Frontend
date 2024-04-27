@@ -1,0 +1,48 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-image: url(./Components/Assests/img3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden; 
+}
+html{
+    scrollbar-width: thin ;
+    scrollbar-color: #6c63ff #000;
+    
+}
+html::-webkit-scrollbar{
+    width: 4px;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #6c63ff;
+    border-radius: 10px;
+}
+html::-webkit-scrollbar-track{
+    background-color: #000;
+}
+
+@layer components{
+    .nav-link{
+        @apply relative font-semibold text-white font-serif text-base cursor-pointer rounded w-fit  md:block after:block after:content-[''] 
+        after:absolute after:h-[4px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition 
+        after:duration-300 after:origin-center hidden 
+    }
+    .nav-mob-link{
+        @apply relative font-semibold text-white cursor-pointer text-2xl w-fit md:block after:block
+        after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0
+        after:hover:scale-x-100 after:transition after:duration-300 after:origin-center 
+    }
+    .skills-card{
+        @apply  p-10 rounded-2xl text-center border-2 border-pink-600 flex justify-center items-center cursor-pointer hover:bg-gradient-to-r from-blue-500 to-purple-950
+    }
+    
+    
+}
+
+
+
