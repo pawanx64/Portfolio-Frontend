@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar } from "./Navbar";
 import image4 from "./Assests/img6.jpg";
 import { ProjectCard } from "./ProjectCard";
+import image5 from "./Assests/img8.png";
+
 
 export const Project = () => {
   return (
@@ -31,7 +33,16 @@ export const Project = () => {
                 />
 
               </div>
-              <div className="bg-white shadow-[0_0px_20px_-0px] hover:shadow-white rounded-lg overflow-hidden">
+              <div >
+                <ProjectCard
+                  imageSrc={image5}
+                  heading="Peer Stream"
+                  description="This real-time video chat application is developed using WebRTC, Socket.io, Node.js, Express.js, and React.js."
+                  link1="https://github.com/pawanx64/PeerStream-Frontend"
+                />
+
+              </div>
+              <div className="w-80 h-96 bg-white shadow-[0_0px_20px_-0px] hover:shadow-white rounded-lg overflow-hidden">
                   <div className="flex justify-center items-center h-[344px] w-80 px-6 py-4">
                   <div className="text-center">
                     <h2 className="text-xl font-bold mb-2">Coming Soon</h2>
