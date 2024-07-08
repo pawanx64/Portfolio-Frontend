@@ -33,30 +33,30 @@ export const Home = () => {
                             </div>
                             <div className='flex flex-wrap  gap-6 justify-center items-center pt-8 pb-8 lg:pb-0 sm:pt-0 lg:justify-start'>
                                   <a href='https://github.com/pawan511coder'>
-                                        <button className='flex gap-2  hover:bg-gradient-to-r from-orange-600 via-pink-600 to-red-600  text-white font-bold py-2 px-4 border border-blue-700 rounded'>
+                                        <button className='flex items-center gap-2 bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 hover:scale-105 transform transition-all duration-300 text-white font-bold py-2 px-6 border border-transparent rounded-full shadow-lg hover:shadow-orange-600/50'>
                                           <h1 className='text-xl font-serif text-white'>Resume</h1>
                                           <FaDownload size={17}className='mt-1 text-white'/>
                                         </button>
                                   </a>
                                   <a href='mailto:pawankumar.nov5@gmail.com'>
-                                          <button className='flex gap-2 hover:bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 text-white font-bold py-2 px-4 border border-blue-700 rounded'>
+                                          <button className='flex items-center gap-2 bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 hover:scale-105 transform transition-all duration-300 text-white font-bold py-2 px-6 border border-transparent rounded-full shadow-lg hover:shadow-orange-600/50'>
                                               <h1 className='text-xl font-serif text-white'>Contact</h1>
                                               <MdOutlineCall size={17}className='mt-1 text-white'/>
                                           </button>
                                   </a> 
                             </div>
-                            <div className='flex flex-wrap gap-4 sm:gap-8 justify-center lg:justify-start'>
+                            <div className='flex flex-wrap gap-4 sm:gap-8 justify-center lg:justify-start  bg-black'>
                                 <a href='https://github.com/pawanx64' target='_blank'>
-                                    <IoLogoGithub size={45} className='text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950 hover:shadow-[0_0px_10px_-0px] rounded-2xl p-1 ' />
+                                    <IoLogoGithub size={45} className='text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5' />
                                 </a>
-                                <a href='https://github.com/pawan511coder' target='_blank'>
-                                  <FaInstagram size={45} className='text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950 hover:shadow-[0_0px_10px_-0px] rounded-2xl p-1 '/>
+                                <a href='https://github.com/pawanx64' target='_blank'>
+                                  <FaInstagram size={45} className='text-white bg-gradient-to-r from-pink-600 via-red-600 to-yellow-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
                                 <a href='https://www.linkedin.com/in/pawankumarnov5/' target='_blank'>
-                                  <FaLinkedin size={45} className='text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950 hover:shadow-[0_0px_10px_-0px] rounded-2xl p-1.5 '/>
+                                  <FaLinkedin size={45} className='text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
                                 <a href='mailto:pawankumar.nov5@gmail.com' target='_blank'>
-                                  <BiLogoGmail size={45} className='text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950 hover:shadow-[0_0px_10px_-0px] rounded-2xl p-1 '/>
+                                  <BiLogoGmail size={45} className='text-white bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
                             </div>    
                         </div>        
