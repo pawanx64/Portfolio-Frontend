@@ -45,7 +45,7 @@ export const Home = () => {
                                           </button>
                                   </a> 
                             </div>
-                            <div className='flex flex-wrap gap-4 sm:gap-8 justify-center lg:justify-start  bg-black'>
+                            <div className='flex flex-wrap gap-4 sm:gap-8 justify-center lg:justify-start  '>
                                 <a href='https://github.com/pawanx64' target='_blank'>
                                     <IoLogoGithub size={45} className='text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5' />
                                 </a>
