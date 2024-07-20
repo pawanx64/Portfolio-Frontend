@@ -83,7 +83,7 @@ export const Admin = () => {
                     <div className='flex flex-col gap-6'>
                         <input 
                             type="password" 
-                            value={password} 
+                            value={Password} 
                             onChange={(e) => setPassword(e.target.value)} 
                             placeholder='Enter The Password' 
                             className='bg-gray-800 text-white font-semibold rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-600'
