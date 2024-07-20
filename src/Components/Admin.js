@@ -54,35 +54,45 @@ export const Admin = () => {
                 theme="colored"
             />
             <Navbar/>
-            <div className='flex flex-wrap justify-center items-center h-screen'>
-                {Log ? (
-                    <div className='flex sm:flex-col gap-10 flex-wrap justify-center items-center h-screen'>
-                        <div className='w-fit'>
-                                <div className='overflow-x-auto h-[400px] max-w-[800px] mx-auto'>
-                                <div className="grid grid-cols-4 gap-0">
-                                                <div className='p-4 border-2 flex justify-center items-center border-white text-white  max-w-[200px] overflow-auto font-bold'>First</div>
-                                                <div className='p-4 border-2 flex justify-center items-center border-white text-white  max-w-[200px] overflow-auto font-bold'>Last</div>
-                                                <div className='p-4 border-2 flex justify-center items-center border-white text-white  max-w-[200px] overflow-auto font-bold'>Email</div>
-                                                <div className='p-4 border-2 flex justify-center items-center border-white text-white  max-w-[200px] overflow-auto font-bold'>Message</div>
-        
-                                                {data && data.map((item, index) => (
-                                                <React.Fragment key={index}>
-                                                    <div className='p-4 border-2 flex justify-center items-center border-white text-white max-w-[200px] overflow-auto'>{item.First}</div>
-                                                    <div className='p-4 border-2 flex justify-center items-center border-white text-white max-w-[200px] overflow-auto'>{item.Last}</div>
-                                                    <div className='p-4 border-2 flex justify-center items-center border-white text-white max-w-[200px] overflow-auto'>{item.Email}</div>
-                                                    <div className='p-4 border-2 flex justify-center items-center border-white text-white max-w-[200px] overflow-auto'>{item.Message}</div>
-                                                </React.Fragment>
-                                                ))}
-                                </div>
-                                </div>
+            <div className='flex flex-col justify-center items-center h-screen px-4'>
+                {isLogged ? (
+                    <div className='w-full max-w-4xl bg-gray-800 p-6 rounded-lg shadow-lg'>
+                        <div className='overflow-x-auto'>
+                            <div className='grid grid-cols-4 gap-2 text-center bg-gray-700 font-bold text-white'>
+                                <div className='p-4'>First</div>
+                                <div className='p-4'>Last</div>
+                                <div className='p-4'>Email</div>
+                                <div className='p-4'>Message</div>
+                                {data && data.map((item, index) => (
+                                    <React.Fragment key={index}>
+                                        <div className='p-4 border-b border-gray-600'>{item.First}</div>
+                                        <div className='p-4 border-b border-gray-600'>{item.Last}</div>
+                                        <div className='p-4 border-b border-gray-600'>{item.Email}</div>
+                                        <div className='p-4 border-b border-gray-600'>{item.Message}</div>
+                                    </React.Fragment>
+                                ))}
+                            </div>
                         </div>
-                        <button onClick={handleLogout} className='bg-slate-200 font-mono  w-80 font-semibold hover:text-white rounded-xl p-4 hover:bg-gradient-to-r from-pink-950 via-blue-700 to-purple-600'>Log Out</button>
+                        <button 
+                            onClick={handleLogout} 
+                            className='mt-6 bg-gradient-to-r from-pink-950 via-blue-700 to-purple-600 text-white font-bold py-2 px-6 rounded-xl hover:scale-105 transform transition-transform duration-300'>
+                            Log Out
+                        </button>
                     </div>
-                    
-                ):(
-                    <div className='flex flex-col gap-10 '>
-                        <input type="password" value={Password} onChange={(e)=>setPassword(e.target.value)} placeholder='Enter The Password' className='bg-slate-200 font-mono  w-80 font-semibold hover:text-white rounded-xl p-4 hover:bg-gradient-to-r from-pink-950 via-blue-700 to-purple-600'/>
-                        <button onClick={handleLogin} className='bg-slate-200 font-mono  w-80 font-semibold hover:text-white rounded-xl p-4 hover:bg-gradient-to-r from-pink-950 via-blue-700 to-purple-600'>Log In</button>
+                ) : (
+                    <div className='flex flex-col gap-6'>
+                        <input 
+                            type="password" 
+                            value={password} 
+                            onChange={(e) => setPassword(e.target.value)} 
+                            placeholder='Enter The Password' 
+                            className='bg-gray-800 text-white font-semibold rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-600'
+                        />
+                        <button 
+                            onClick={handleLogin} 
+                            className='bg-gradient-to-r from-pink-950 via-blue-700 to-purple-600 text-white font-bold py-2 px-6 rounded-xl hover:scale-105 transform transition-transform duration-300'>
+                            Log In
+                        </button>
                     </div>
                 )}
             </div>
