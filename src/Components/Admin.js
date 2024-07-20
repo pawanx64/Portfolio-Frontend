@@ -40,7 +40,7 @@ export const Admin = () => {
         setPassword([]);
       };
   return (
-    <div>
+    <div className='text-white min-h-screen flex flex-col'>
             <ToastContainer
                 position="bottom-center"
                 autoClose={2500}
@@ -53,9 +53,9 @@ export const Admin = () => {
                 pauseOnHover
                 theme="colored"
             />
-            <Navbar/>
-            <div className='flex flex-col justify-center items-center h-screen px-4'>
-                {Log ? (
+            <Navbar />
+            <div className='flex flex-grow items-center justify-center px-4'>
+                {Log? (
                     <div className='w-full max-w-4xl bg-gray-800 p-6 rounded-lg shadow-lg'>
                         <div className='overflow-x-auto'>
                             <div className='grid grid-cols-4 gap-2 text-center bg-gray-700 font-bold text-white'>
@@ -96,6 +96,7 @@ export const Admin = () => {
                     </div>
                 )}
             </div>
-    </div>
+        </div>
+
   )
 }
