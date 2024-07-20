@@ -55,7 +55,7 @@ export const Admin = () => {
             />
             <Navbar/>
             <div className='flex flex-col justify-center items-center h-screen px-4'>
-                {isLogged ? (
+                {Log ? (
                     <div className='w-full max-w-4xl bg-gray-800 p-6 rounded-lg shadow-lg'>
                         <div className='overflow-x-auto'>
                             <div className='grid grid-cols-4 gap-2 text-center bg-gray-700 font-bold text-white'>
