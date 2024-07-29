@@ -3,9 +3,29 @@ import { Navbar } from "./Navbar";
 import image4 from "./Assests/img6.jpg";
 import { ProjectCard } from "./ProjectCard";
 import image5 from "./Assests/img8.png";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Project = () => {
+
+
+  AOS.init({
+    easing:'ease-out-quart',
+    delay:0,
+    duration:750,
+})
+const defaultOptions = {
+    reverse:        false, 
+    max:            35,    
+    perspective:    1000, 
+    scale:          1.1,   
+    speed:          2000,   
+    transition:     true,   
+    axis:           null,  
+    reset:          true,  
+    easing:         "cubic-bezier(0,0,0,0)",  
+  }
+
   return (
     <div>
       <Navbar />

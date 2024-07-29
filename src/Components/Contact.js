@@ -5,7 +5,13 @@ import  axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 export const Contact = () => {
+
+
+        
+
+
         const [First,setFirst]=useState('');
         const [Last,setLast]=useState('');
         const [Email,setEmail]=useState('');
@@ -87,7 +93,7 @@ export const Contact = () => {
   return (
     <div>
         <Navbar/>
-        <div className='body overflow-x-hidden sm:overflow-hidden h-screen flex flex-wrap justify-center'>
+        <div  data-aos="zoom-in"  className='body overflow-x-hidden sm:overflow-hidden h-screen flex flex-wrap justify-center'>
                                         
                 <div className='h-fit  flex flex-wrap p-10 m-20 rounded-xl flex-col-reverse gap-10 lg:flex-row'>
                         <div className='h-fit w-fit flex flex-wrap justify-between items-center flex-col'>

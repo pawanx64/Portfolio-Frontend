@@ -6,10 +6,28 @@ import { BiLogoGmail } from "react-icons/bi";
 import { MdOutlineCall } from "react-icons/md";
 import { useTypewriter} from 'react-simple-typewriter';
 import { Navbar } from './Navbar';
-
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Home = () => {
+
+  AOS.init({
+    easing:'ease-out-quart',
+    delay:0,
+    duration:750,
+})
+const defaultOptions = {
+    reverse:        false, 
+    max:            35,    
+    perspective:    1000, 
+    scale:          1.1,   
+    speed:          2000,   
+    transition:     true,   
+    axis:           null,  
+    reset:          true,  
+    easing:         "cubic-bezier(0,0,0,0)",  
+  }
+
   const[typeEffect]=useTypewriter({
     words:['Welcome To My Portfolio','MERN Stack Developer','DSA In C++','Like To Play PC Games'],
     loop:{},
@@ -19,7 +37,7 @@ export const Home = () => {
   return (
     <div >      
         <Navbar/>
-        <div className='body h-screen flex justify-evenly items-center mt-36 sm:mt-0  mb-36 sm:mb-0 pt-10 pb-10 pl-5 pr-5 flex-col lg:flex-row  '>
+        <div data-aos="zoom-in" className='body h-screen flex justify-evenly items-center mt-36 sm:mt-0  mb-36 sm:mb-0 pt-10 pb-10 pl-5 pr-5 flex-col lg:flex-row  '>
                   
                         <div>
                             <img src={image}  alt="logo" className='rounded-3xl w-72 h-72'/>
@@ -32,13 +50,13 @@ export const Home = () => {
                                 <span className='text-[20px] sm:text-[28px] text-center font-semibold text-orange-400 flex-col lg:flex-row'>{typeEffect}</span>
                             </div>
                             <div className='flex flex-wrap  gap-6 justify-center items-center pt-8 pb-8 lg:pb-0 sm:pt-0 lg:justify-start'>
-                                  <a href='https://github.com/pawan511coder'>
+                                  <a href='https://drive.google.com/file/d/1P5k3GtQnv6f_conOFD50elWvCfwSHv70/view?usp=drive_link'  target='_blank'>
                                         <button className='flex items-center gap-2 bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 hover:scale-105 transform transition-all duration-300 text-white font-bold py-2 px-6 border border-transparent rounded-full shadow-lg hover:shadow-orange-600/50'>
                                           <h1 className='text-xl font-serif text-white'>Resume</h1>
                                           <FaDownload size={17}className='mt-1 text-white'/>
                                         </button>
                                   </a>
-                                  <a href='mailto:pawankumar.nov5@gmail.com'>
+                                  <a href='mailto:pawankumar.nov5@gmail.com'  target='_blank'>
                                           <button className='flex items-center gap-2 bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 hover:scale-105 transform transition-all duration-300 text-white font-bold py-2 px-6 border border-transparent rounded-full shadow-lg hover:shadow-orange-600/50'>
                                               <h1 className='text-xl font-serif text-white'>Contact</h1>
                                               <MdOutlineCall size={17}className='mt-1 text-white'/>
@@ -49,7 +67,7 @@ export const Home = () => {
                                 <a href='https://github.com/pawanx64' target='_blank'>
                                     <IoLogoGithub size={45} className='text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5' />
                                 </a>
-                                <a href='https://github.com/pawanx64' target='_blank'>
+                                <a href='https://www.instagram.com/_pawan5_/' target='_blank'>
                                   <FaInstagram size={45} className='text-white bg-gradient-to-r from-pink-600 via-red-600 to-yellow-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
                                 <a href='https://www.linkedin.com/in/pawankumarnov5/' target='_blank'>
