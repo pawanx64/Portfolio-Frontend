@@ -1,7 +1,7 @@
 import React from 'react';
 import image from './Assests/img5.jpg';
 import { IoLogoGithub } from "react-icons/io";
-import { FaInstagram,FaLinkedin,FaDownload} from "react-icons/fa";
+import { FaInstagram,FaLinkedin,FaDownload,FaDiscord} from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { MdOutlineCall } from "react-icons/md";
 import { useTypewriter} from 'react-simple-typewriter';
@@ -75,6 +75,9 @@ const defaultOptions = {
                                 </a>
                                 <a href='mailto:pawankumar.nov5@gmail.com' target='_blank'>
                                   <BiLogoGmail size={45} className='text-white bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
+                                </a>
+                                <a href='https://discordapp.com/users/pawanx64' target='_blank'>
+                                  <FaDiscord size={45} className='text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
                             </div>    
                         </div>        
