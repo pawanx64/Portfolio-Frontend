@@ -50,13 +50,13 @@ const defaultOptions = {
                                 <span className='text-[20px] sm:text-[28px] text-center font-semibold text-orange-400 flex-col lg:flex-row'>{typeEffect}</span>
                             </div>
                             <div className='flex flex-wrap  gap-6 justify-center items-center pt-8 pb-8 lg:pb-0 sm:pt-0 lg:justify-start'>
-                                  <a href='https://drive.google.com/file/d/1P5k3GtQnv6f_conOFD50elWvCfwSHv70/view?usp=drive_link'  target='_blank'>
+                                  <a href='https://drive.google.com/file/d/1P5k3GtQnv6f_conOFD50elWvCfwSHv70/view?usp=drive_link'  target='_blank' rel='noopener noreferrer'>
                                         <button className='flex items-center gap-2 bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 hover:scale-105 transform transition-all duration-300 text-white font-bold py-2 px-6 border border-transparent rounded-full shadow-lg hover:shadow-orange-600/50'>
                                           <h1 className='text-xl font-serif text-white'>Resume</h1>
                                           <FaDownload size={17}className='mt-1 text-white'/>
                                         </button>
                                   </a>
-                                  <a href='mailto:pawankumar.nov5@gmail.com'  target='_blank'>
+                                  <a href='mailto:pawankumar.nov5@gmail.com'  target='_blank' rel='noopener noreferrer'>
                                           <button className='flex items-center gap-2 bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 hover:scale-105 transform transition-all duration-300 text-white font-bold py-2 px-6 border border-transparent rounded-full shadow-lg hover:shadow-orange-600/50'>
                                               <h1 className='text-xl font-serif text-white'>Contact</h1>
                                               <MdOutlineCall size={17}className='mt-1 text-white'/>
@@ -64,19 +64,19 @@ const defaultOptions = {
                                   </a> 
                             </div>
                             <div className='flex flex-wrap gap-4 sm:gap-8 justify-center lg:justify-start  '>
-                                <a href='https://github.com/pawanx64' target='_blank'>
+                                <a href='https://github.com/pawanx64' target='_blank' rel='noopener noreferrer'>
                                     <IoLogoGithub size={45} className='text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5' />
                                 </a>
-                                <a href='https://www.instagram.com/_pawan5_/' target='_blank'>
+                                <a href='https://www.instagram.com/_pawan5_/' target='_blank' rel='noopener noreferrer'>
                                   <FaInstagram size={45} className='text-white bg-gradient-to-r from-pink-600 via-red-600 to-yellow-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
-                                <a href='https://www.linkedin.com/in/pawankumarnov5/' target='_blank'>
+                                <a href='https://www.linkedin.com/in/pawankumarnov5/' target='_blank' rel='noopener noreferrer'>
                                   <FaLinkedin size={45} className='text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
-                                <a href='mailto:pawankumar.nov5@gmail.com' target='_blank'>
+                                <a href='mailto:pawankumar.nov5@gmail.com' target='_blank' rel='noopener noreferrer'>
                                   <BiLogoGmail size={45} className='text-white bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
-                                <a href='https://discordapp.com/users/pawanx64' target='_blank'>
+                                <a href='https://discordapp.com/users/pawanx64' target='_blank' rel='noopener noreferrer'>
                                   <FaDiscord size={45} className='text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
                             </div>    
