@@ -93,9 +93,8 @@ export const Contact = () => {
   return (
     <div>
         <Navbar/>
-        <div  data-aos="zoom-in"  className='body overflow-x-hidden sm:overflow-hidden h-screen flex flex-wrap justify-center'>
-                                        
-                <div className='h-fit  flex flex-wrap p-10 m-20 rounded-xl flex-col-reverse gap-10 lg:flex-row'>
+        <div  data-aos="zoom-in"  className=' overflow-x-hidden min-h-screen  flex flex-col items-center py-6 px-4 sm:px-6 lg:px-8'>                                 
+                <div className='h-fit flex flex-wrap p-10 m-20 rounded-xl flex-col-reverse gap-10 lg:flex-row'>
                         <div className='h-fit w-fit flex flex-wrap justify-between items-center flex-col'>
                                 <div className=' text-white font-serif text-5xl font-semibold'>
                                         Contact Us
