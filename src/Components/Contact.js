@@ -119,7 +119,7 @@ export const Contact = () => {
                                                 <input  type="email" value={Email} onChange={(event)=>setEmail(event.target.value)}  placeholder="Email" className=' bg-slate-200 outline-none font-mono font-semibold border-2 w-80 rounded-xl p-4 hover:text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950'/>
                                         </div>
                                         <div className='flex flex-wrap justify-center pt-5'>
-                                                <input  type="text" value={Message} onChange={(event)=>setMessage(event.target.value)}  placeholder="Message" className='break-word h-32 w-80 outline-none rounded-xl hover:text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950 font-mono font-semibold border-2 pb-20 pl-4 bg-slate-200'/>
+                                                <textarea  type="text" value={Message} onChange={(event)=>setMessage(event.target.value)}  placeholder="Message" className=' h-32 w-80 outline-none rounded-xl resize-none hover:text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950 font-mono font-semibold border-2 p-4 bg-slate-200'/>
                                         </div>
                                         <div className='flex flex-wrap justify-center pt-5'> 
                                                 <button onClick={handleSubmit} className='  bg-slate-200 font-mono  w-80 font-semibold hover:text-white rounded-xl p-4 hover:bg-gradient-to-r from-pink-950 via-blue-700 to-purple-600 '>Send Me</button>
