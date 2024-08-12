@@ -35,7 +35,7 @@ const defaultOptions = {
     deleteSpeed:50,
   })
   return (
-    <div className="bg-cover bg-center h-screen flex flex-col">      
+    <div className="bg-cover bg-center min-h-screen flex flex-col overflow-x-hidden">      
         <Navbar/>
         <div data-aos="zoom-in" className='h-screen flex justify-evenly items-center sm:mt-36 md:mt-0   mb-36 sm:mb-0  pl-5 pr-5 flex-col lg:flex-row '>
                         <div>
