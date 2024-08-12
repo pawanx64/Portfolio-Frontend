@@ -35,7 +35,7 @@ const defaultOptions = {
     deleteSpeed:50,
   })
   return (
-    <div className="relative h-screen w-full overflow-hidden">      
+    <div className="relative h-screen w-full ">      
         <Navbar/>
         <div data-aos="zoom-in" className='h-screen flex justify-evenly items-center sm:mt-36 md:mt-0   mb-36 sm:mb-0  pl-5 pr-5 flex-col lg:flex-row '>
                         <div>
