@@ -29,18 +29,18 @@ const defaultOptions = {
   return (
     <div>
       <Navbar />
-      <div className="body h-full">
-        <div data-aos="zoom-in" className="pl-10 pr-10">
-            <span className="flex flex-wrap text-center justify-center pt-16 font-serif font-semibold text-white text-4xl">
+      <div className="body min-h-screen pt-10 sm:pt-0">
+        <div data-aos="zoom-in" className="px-4 py-16 max-w-6xl mx-auto">
+            <span className="flex flex-wrap text-center justify-center font-serif font-semibold text-white text-4xl">
               My Recent Project
             </span>
-            <span className="flex flex-wrap text-center justify-center pt-4 font-serif font-medium text-white text-xl">
+            <span className="flex flex-wrap text-center justify-center font-serif font-medium text-white text-xl">
               Here Are My Few Project I've Worked Recently
             </span>
         </div>
         <div data-aos="zoom-in">
           <div>
-            <div className="flex justify-center gap-10 items-center flex-col lg:flex-row h-screen mt-0">
+            <div className="flex justify-center gap-10 items-center flex-col lg:flex-row  mt-0">
               <div >
                 <ProjectCard
                   imageSrc={image4}
