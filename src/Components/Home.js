@@ -46,7 +46,7 @@ const defaultOptions = {
                                 <span className='flex flex-wrap text-center text-[28px] lg:text-[48px] font-serif font-semibold text-yellow-200 justify-center items-center flex-col lg:flex-row'>Hello I'm Pawan </span>
                             </div>
                             <div className='flex flex-wrap justify-center font-serif items-center lg:justify-start'>
-                                <span className='text-[20px] sm:text-[28px] text-center font-semibold text-orange-400 flex-col lg:flex-row'>{typeEffect}</span>
+                                <span className='text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] text-center font-semibold text-orange-400 '>{typeEffect}</span>
                             </div>
                             <div className='flex flex-wrap  gap-6 justify-center items-center pt-8 pb-8 lg:pb-0 sm:pt-0 lg:justify-start'>
                                   <a href='https://drive.google.com/file/d/1P5k3GtQnv6f_conOFD50elWvCfwSHv70/view?usp=drive_link'  target='_blank' rel='noopener noreferrer'>
