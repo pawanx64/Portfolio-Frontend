@@ -35,10 +35,9 @@ const defaultOptions = {
     deleteSpeed:50,
   })
   return (
-    <div >      
+    <div className="relative h-screen w-full overflow-hidden">      
         <Navbar/>
-        <div data-aos="zoom-in" className='body h-screen flex justify-evenly items-center mt-36 sm:mt-0  mb-36 sm:mb-0 pt-10 pb-10 pl-5 pr-5 flex-col lg:flex-row  '>
-                  
+        <div data-aos="zoom-in" className='h-screen flex justify-evenly items-center sm:mt-36 md:mt-0   mb-36 sm:mb-0  pl-5 pr-5 flex-col lg:flex-row '>
                         <div>
                             <img src={image}  alt="logo" className='rounded-3xl w-72 h-72'/>
                         </div>
