@@ -29,7 +29,7 @@ const defaultOptions = {
   return (
     <div>
       <Navbar />
-      <div className="body min-h-screen pt-10 sm:pt-0">
+      <div className="body min-h-screen pt-10 pb-10 sm:pt-0">
         <div data-aos="zoom-in" className="px-4 py-16 max-w-6xl mx-auto">
             <span className="flex flex-wrap text-center justify-center font-serif font-semibold text-white text-4xl">
               My Recent Project
