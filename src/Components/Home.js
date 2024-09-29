@@ -49,7 +49,7 @@ const defaultOptions = {
                                 <span className='text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] text-center font-semibold text-orange-400 '>{typeEffect}</span>
                             </div>
                             <div className='flex flex-wrap  gap-6 justify-center items-center pt-8 pb-8 lg:pb-0 sm:pt-0 lg:justify-start'>
-                                  <a href='https://drive.google.com/file/d/1P5k3GtQnv6f_conOFD50elWvCfwSHv70/view?usp=drive_link'  target='_blank' rel='noopener noreferrer'>
+                                  <a href='https://drive.google.com/file/d/1p-_sXEWbYJpwG6IbEwJeI1pIiWLwgZCf/view?usp=drive_link'  target='_blank' rel='noopener noreferrer'>
                                         <button className='flex items-center gap-2 bg-gradient-to-r from-orange-600 via-pink-600 to-red-600 hover:scale-105 transform transition-all duration-300 text-white font-bold py-2 px-6 border border-transparent rounded-full shadow-lg hover:shadow-orange-600/50'>
                                           <h1 className='text-xl font-serif text-white'>Resume</h1>
                                           <FaDownload size={17}className='mt-1 text-white'/>
