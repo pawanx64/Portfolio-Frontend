@@ -3,6 +3,7 @@ import { Navbar } from "./Navbar";
 import image4 from "./Assests/img6.jpg";
 import { ProjectCard } from "./ProjectCard";
 import image5 from "./Assests/img8.png";
+import image6 from "./Assests/image6.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -59,6 +60,16 @@ const defaultOptions = {
                   heading="Peer Stream"
                   description="This real-time video chat application is developed using WebRTC, Socket.io, Node.js, Express.js, and React.js."
                   link1="https://github.com/pawanx64/PeerStream-Frontend"
+                />
+
+              </div>
+              <div >
+                <ProjectCard
+                  imageSrc={image6}
+                  heading="Resume Checker"
+                  description="A user-friendly Resume Checker web app that helps job seekers improve their resumes by matching them with job descriptions."
+                  link1="https://github.com/pawanx64/Resume-Checker-Frontend"
+                  link2="https://resume-checker-frontend-puce.vercel.app/"
                 />
 
               </div>
