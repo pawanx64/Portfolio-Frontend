@@ -66,7 +66,7 @@ const defaultOptions = {
                                 <a href='https://github.com/pawanx64' target='_blank' rel='noopener noreferrer'>
                                     <IoLogoGithub size={45} className='text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5' />
                                 </a>
-                                <a href='https://www.instagram.com/_pawan5_/' target='_blank' rel='noopener noreferrer'>
+                                <a href='https://www.instagram.com/pawan.k02/' target='_blank' rel='noopener noreferrer'>
                                   <FaInstagram size={45} className='text-white bg-gradient-to-r from-pink-600 via-red-600 to-yellow-600 hover:shadow-[0_0px_10px_-0px] hover:scale-105 transform transition-all duration-300 rounded-2xl p-1.5'/>
                                 </a>
                                 <a href='https://www.linkedin.com/in/pawankumarnov5/' target='_blank' rel='noopener noreferrer'>
