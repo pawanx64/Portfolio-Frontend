@@ -22,13 +22,13 @@ export const Contact = () => {
     event.preventDefault();
 
     if (!First || !Last) {
-      return toast.error('Enter valid name 😔', { position: 'top-center', autoClose: 2500, theme: 'colored' });
+      return toast.error('Enter valid name 😔', { position: 'bottom-center', autoClose: 2500, theme: 'colored' });
     }
     if (!Email || !Email.includes('@')) {
-      return toast.error('Enter valid email 😔', { position: 'top-center', autoClose: 2500, theme: 'colored' });
+      return toast.error('Enter valid email 😔', { position: 'bottom-center', autoClose: 2500, theme: 'colored' });
     }
     if (!Message) {
-      return toast.error('Enter a valid reason to connect 😔', { position: 'top-center', autoClose: 2500, theme: 'colored' });
+      return toast.error('Enter a valid reason to connect 😔', { position: 'bottom-center', autoClose: 2500, theme: 'colored' });
     }
 
     try {
@@ -38,7 +38,7 @@ export const Contact = () => {
         Email,
         Message,
       });
-      toast.success('Thanks for your response 😊', { position: 'top-center', autoClose: 2500, theme: 'colored' });
+      toast.success('Thanks for your response 😊', { position: 'bottom-center', autoClose: 2500, theme: 'colored' });
       setFirst('');
       setLast('');
       setEmail('');
