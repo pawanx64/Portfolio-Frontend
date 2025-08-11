@@ -1,137 +1,142 @@
-import React, { useState } from 'react'
-import { Navbar } from './Navbar'
+import React, { useState,useEffect } from 'react';
+import { Navbar } from './Navbar';
 import image3 from './Assests/img7.png';
-import  axios from 'axios';
+import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Contact = () => {
+  const [First, setFirst] = useState('');
+  const [Last, setLast] = useState('');
+  const [Email, setEmail] = useState('');
+  const [Message, setMessage] = useState('');
 
+  useEffect(() => {
+    AOS.init({ duration: 800, easing: 'ease-out-quart', once: true });
+    window.scrollTo(0, 0);
+  }, []);
 
-        
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
+    if (!First || !Last) {
+      return toast.error('Enter valid name 😔', { position: 'top-center', autoClose: 2500, theme: 'colored' });
+    }
+    if (!Email || !Email.includes('@')) {
+      return toast.error('Enter valid email 😔', { position: 'top-center', autoClose: 2500, theme: 'colored' });
+    }
+    if (!Message) {
+      return toast.error('Enter a valid reason to connect 😔', { position: 'top-center', autoClose: 2500, theme: 'colored' });
+    }
 
-        const [First,setFirst]=useState('');
-        const [Last,setLast]=useState('');
-        const [Email,setEmail]=useState('');
-        const [Message,setMessage]=useState('');
-        axios.defaults.withCredentials=true;
-        const handleSubmit=async(event)=>{
-                event.preventDefault();
-                if(First=== '' || Last=== '')
-                {
-                        toast.error('Enter Valid Name😔', {
-                                position: "bottom-center",
-                                autoClose: 2500,
-                                hideProgressBar: false,
-                                closeOnClick: true,
-                                pauseOnHover: true,
-                                draggable: true,
-                                progress: undefined,
-                                theme: "colored",
-                        });
-                }
-                else if(Email==='' || !Email.includes('@'))
-                {
-                        toast.error('Enter Valid Email😔', {
-                                position: "bottom-center",
-                                autoClose: 2500,
-                                hideProgressBar: false,
-                                closeOnClick: true,
-                                pauseOnHover: true,
-                                draggable: true,
-                                progress: undefined,
-                                theme: "colored",
-                        });
-                }
-                else if(Message==='')
-                {
-                        toast.error('Enter A valid Reason To Connect😔', {
-                                position: "bottom-center",
-                                autoClose: 2500,
-                                hideProgressBar: false,
-                                closeOnClick: true,
-                                pauseOnHover: true,
-                                draggable: true,
-                                progress: undefined,
-                                theme: "colored",
-                        });
-                }
-                else{
-                        try{
-                                await axios.post('https://port-folio-backend-phi.vercel.app/CreateContact',{
-                                     First:First,
-                                     Last:Last,
-                                     Email:Email,
-                                     Message:Message,
-                                });
-                                toast.success('Thanks for your response😊', {
-                                        position: "bottom-center",
-                                        autoClose: 2500,
-                                        hideProgressBar: false,
-                                        closeOnClick: true,
-                                        pauseOnHover: true,
-                                        draggable: true,
-                                        progress: undefined,
-                                        theme: "colored",
-                                });
-                                setFirst('')
-                                setLast('')
-                                setEmail('')
-                                setMessage('')
-                             }
-                        catch(error){
-                                console.log(error);
-                                toast.error('Error occurred while submitting the form🙏');
-                        }
-                }
-        
-      }
-      
-        
+    try {
+      await axios.post('https://port-folio-backend-phi.vercel.app/CreateContact', {
+        First,
+        Last,
+        Email,
+        Message,
+      });
+      toast.success('Thanks for your response 😊', { position: 'top-center', autoClose: 2500, theme: 'colored' });
+      setFirst('');
+      setLast('');
+      setEmail('');
+      setMessage('');
+    } catch (error) {
+      console.error(error);
+      toast.error('Error occurred while submitting the form 🙏');
+    }
+  };
+
   return (
-    <div>
-        <Navbar/>
-        <div  data-aos="zoom-in"  className=' overflow-x-hidden min-h-screen  flex flex-col items-center py-6 px-4 sm:px-6 lg:px-8'>                                 
-                <div className='h-fit flex flex-wrap p-10 m-20 rounded-xl flex-col-reverse gap-10 lg:flex-row'>
-                        <div className='h-fit w-fit flex flex-wrap justify-between items-center flex-col'>
-                                <div className=' text-white font-serif text-5xl font-semibold'>
-                                        Contact Us
-                                </div>
-                                <div className='p-10  rounded-2xl '>        
-                                        <ToastContainer
-                                                position="bottom-center"
-                                                autoClose={2500}
-                                                hideProgressBar={false}
-                                                newestOnTop={false}
-                                                closeOnClick
-                                                rtl={false}
-                                                pauseOnFocusLoss
-                                                draggable
-                                                pauseOnHover
-                                                theme="colored"/>
-                                        <div className='flex flex-wrap justify-center gap-5 sm:gap-1'> 
-                                                <input  type="text"  value={First} onChange={(event)=>setFirst(event.target.value)}  placeholder="First Name" className=' bg-slate-200 outline-none font-mono  font-semibold border-2 p-4 w-80 sm:w-40 h-12  rounded-xl hover:text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950'/>
-                                                <input  type="text" value={Last} onChange={(event)=>setLast(event.target.value)} placeholder="Last Name" className=' bg-slate-200 outline-none font-mono font-semibold border-2 p-4 w-80 sm:w-40 h-12 rounded-xl hover:text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950'/>
-                                        </div>
-                                        <div className='flex flex-wrap justify-center pt-5'>
-                                                <input  type="email" value={Email} onChange={(event)=>setEmail(event.target.value)}  placeholder="Email" className=' bg-slate-200 outline-none font-mono font-semibold border-2 w-80 rounded-xl p-4 hover:text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950'/>
-                                        </div>
-                                        <div className='flex flex-wrap justify-center pt-5'>
-                                                <textarea  type="text" value={Message} onChange={(event)=>setMessage(event.target.value)}  placeholder="Message" className=' h-32 w-80 outline-none rounded-xl resize-none hover:text-white hover:bg-gradient-to-r from-blue-950 via-pink-950 to-purple-950 font-mono font-semibold border-2 p-4 bg-slate-200'/>
-                                        </div>
-                                        <div className='flex flex-wrap justify-center pt-5'> 
-                                                <button onClick={handleSubmit} className='  bg-slate-200 font-mono  w-80 font-semibold hover:text-white rounded-xl p-4 hover:bg-gradient-to-r from-pink-950 via-blue-700 to-purple-600 '>Send Me</button>
-                                        </div>
-                                </div>
-                        </div>
-                        <div className='flex flex-wrap justify-center flex-row items-center'>
-                                <img src={image3} alt="logo" className='rounded-3xl z-10 w-72 h-72'/>
-                        </div>
+    <div className="bg-slate-900 min-h-screen">
+      {/* Navbar always stays on top */}
+      <Navbar />
+      <div className="absolute -top-10 -left-10 w-72 h-72 bg-purple-500/40 rounded-full blur-3xl animate-pulse" />
+     
+
+      {/* Main content with padding to avoid navbar overlap */}
+      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 pt-28">
+        <div
+          data-aos="fade-up"
+          className="w-full max-w-5xl bg-white/10 backdrop-blur-lg rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12 border border-white/20 relative overflow-hidden"
+        >
+          {/* Glowing background effects */}
+          <div className="absolute -top-10 -left-10 w-60 h-60 bg-purple-500/40 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-blue-500/40 rounded-full blur-3xl animate-pulse" />
+
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10 relative z-10">
+            {/* Left Image */}
+            <div className="flex justify-center flex-shrink-0">
+              <img
+                src={image3}
+                alt="Contact Illustration"
+                className="rounded-3xl shadow-2xl w-60 h-60 sm:w-72 sm:h-72 object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+
+            {/* Right Form */}
+            <div className="flex-1 w-full">
+              <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 text-center lg:text-left">
+                Let’s Work Together
+              </h1>
+              <p className="text-gray-300 mb-6 sm:mb-8 text-center lg:text-left text-sm sm:text-base">
+                Got a question, proposal, or just want to say hello? Drop me a message!
+              </p>
+
+              <ToastContainer />
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                {/* First & Last Name */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    value={First}
+                    onChange={(e) => setFirst(e.target.value)}
+                    placeholder="First Name"
+                    className="p-3 sm:p-4 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none border border-transparent focus:border-cyan-400 transition-all"
+                  />
+                  <input
+                    type="text"
+                    value={Last}
+                    onChange={(e) => setLast(e.target.value)}
+                    placeholder="Last Name"
+                    className="p-3 sm:p-4 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none border border-transparent focus:border-cyan-400 transition-all"
+                  />
                 </div>
-                
+
+                {/* Email */}
+                <input
+                  type="email"
+                  value={Email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                  className="p-3 sm:p-4 w-full rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none border border-transparent focus:border-cyan-400 transition-all"
+                />
+
+                {/* Message */}
+                <textarea
+                  value={Message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Your Message"
+                  className="p-3 sm:p-4 w-full h-28 sm:h-32 rounded-xl bg-white/20 text-white placeholder-gray-300 outline-none border border-transparent focus:border-cyan-400 transition-all resize-none"
+                />
+
+                {/* Submit Button */}
+                <div className="flex justify-center lg:justify-start">
+                  <button
+                    type="submit"
+                    className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-transform"
+                  >
+                    Send Message 🚀
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
