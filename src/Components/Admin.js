@@ -16,6 +16,13 @@ export const Admin = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Refresh AOS animations when logged in and table renders
+  useEffect(() => {
+    if (Log) {
+      AOS.refresh();
+    }
+  }, [Log]);
+
   useEffect(() => {
     axios
       .get('https://port-folio-backend-phi.vercel.app/getcontacts')
@@ -43,11 +50,12 @@ export const Admin = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-900 text-white">
+    <div className="min-h-screen flex flex-col bg-slate-900 text-white relative">
       <ToastContainer position="top-center" autoClose={2500} theme="colored" />
       <Navbar />
-       <div className="absolute -top-10 -left-10 w-72 h-72 bg-purple-500/40 rounded-full blur-3xl animate-pulse" />
-      <div className="flex flex-grow items-center justify-center p-6">
+      <div className="absolute -top-10 -left-10 w-72 h-72 bg-purple-500/40 rounded-full blur-3xl animate-pulse" />
+      {/* Added pt-20 here to avoid overlap with Navbar */}
+      <div className="flex flex-grow items-center justify-center p-6 pt-20 w-full">
         {Log ? (
           <div
             data-aos="zoom-in"
